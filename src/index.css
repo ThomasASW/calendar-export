@@ -8,7 +8,53 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root{
+  height: 100vh;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+input,
+input::before,
+input::after {
+  box-sizing: border-box;
+}
+
+input {
+  border: 2px solid #8b8a8b;
+  border-radius: 4px;
+  font-size: 18px;
+  padding: 0.25em 0.5em;
+  width: 100%;
+  transition: 300ms border-color ease-in-out;
+  margin-bottom: 10px;
+}
+
+input:not(textarea) {
+  line-height: 1;
+  height: 2.25rem;
+}
+
+input[readonly] {
+  border-style: dotted;
+  cursor: not-allowed;
+  color: #777;
+}
+
+input[disabled] {
+  --input-border: #ccc;
+
+  background-color: #eee;
+  cursor: not-allowed;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus {
+  border-color: hsl(226, 85%, 55%);
 }
